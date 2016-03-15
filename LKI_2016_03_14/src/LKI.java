@@ -1,3 +1,8 @@
+/**
+ * 
+ * @author Phi Long Tran <191624>
+ *
+ */
 
 public class LKI {
 
