@@ -2,7 +2,8 @@
 public class LKI {
 
 	public static void main(String[] args) {
-		System.out.println("AB C D");
+		System.out.println("Aufgabe 4a)");
+		System.out.println("A	B	C	D	Result");
 		System.out.println(evaluatea(true, true, true, true));
 		System.out.println(evaluatea(true, true, true, false));
 		System.out.println(evaluatea(true, true, false, true));
@@ -20,6 +21,9 @@ public class LKI {
 		System.out.println(evaluatea(false, false, false, true));
 		System.out.println(evaluatea(false, false, false, false));
 
+		System.out.println();
+		System.out.println("Aufgabe 4b)");
+		System.out.println("A	B	C	D	Result");
 		System.out.println(evaluateb(true, true, true, true));
 		System.out.println(evaluateb(true, true, true, false));
 		System.out.println(evaluateb(true, true, false, true));
@@ -48,10 +52,12 @@ public class LKI {
 	}
 
 	public static boolean evaluatea(boolean a, boolean b, boolean c, boolean d) {
+		System.out.print(a + "	" + b + "	" + c + "	" + d + "	");
 		return imp(imp(a, b) && imp(b, c) && imp(c, d) && imp(d, a), equ(a, c));
 	}
 
 	public static boolean evaluateb(boolean a, boolean b, boolean c, boolean d) {
+		System.out.print(a + "	" + b + "	" + c + "	" + d + "	");
 		return imp(a || b || c || d, imp(!a && !b, !d || c));
 	}
 
