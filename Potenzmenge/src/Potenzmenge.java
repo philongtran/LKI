@@ -7,28 +7,31 @@
 public class Potenzmenge {
 
 	public static void main(String[] args) {
-		int[] b = new int[5];
+		int elements = 5;
+		int[] menge = new int[elements];
 		String binary;
 		String potenzmenge = "P({";
 		String result = "";
-		String menge = "M = { 1, 2, 3, 4, 5 }";
+		String mengeString = "M = {";
 		char bi;
 
-		for (int i = 0; i < 5; i++) {
-			b[i] = i + 1;
+		for (int i = 0; i < elements; i++) {
+			menge[i] = i + 1;
+			mengeString = mengeString + " " + menge[i] + ",";
 		}
-		System.out.println(menge);
+		mengeString = mengeString.substring(0, mengeString.length() - 1);
+		System.out.println(mengeString + " }");
 
-		for (int i = 0; i < 32; i++) {
+		for (int i = 0; i < Math.pow(2, elements); i++) {
 			binary = Integer.toBinaryString(i);
-			while (binary.length() < 5) {
+			while (binary.length() < elements) {
 				binary = "0" + binary;
 			}
 			System.out.println(binary);
-			for (int a = 0; a < 5; a++) {
+			for (int a = 0; a < elements; a++) {
 				bi = binary.charAt(a);
 				if (Character.getNumericValue(bi) == 1) {
-					result = result + " " + b[a] + ",";
+					result = result + " " + menge[a] + ",";
 				}
 			}
 			if (result.length() > 2)
