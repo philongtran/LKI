@@ -21,8 +21,10 @@ public class Potenzmenge {
 			menge[i] = i + 1;
 			mengeString = mengeString + " " + menge[i] + ",";
 		}
-		// cut of the last ","
-		mengeString = mengeString.substring(0, mengeString.length() - 1);
+		if (elements > 0) {
+			// cut of the last ","
+			mengeString = mengeString.substring(0, mengeString.length() - 1);
+		}
 		System.out.println(mengeString + " }");
 
 		// create binary numbers
