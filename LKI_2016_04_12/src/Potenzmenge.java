@@ -34,7 +34,7 @@ public class Potenzmenge {
 				// add zeros in front for consistent look
 				binary = "0" + binary;
 			}
-			System.out.println(binary);
+			// System.out.println(binary);
 			// convert binary number to a number for the menge
 			for (int index = 0; index < elements; index++) {
 				bi = binary.charAt(index);
@@ -45,10 +45,10 @@ public class Potenzmenge {
 			if (result.length() > 2)
 				// cut of the last ","
 				result = result.substring(0, result.length() - 1);
-			potenzmenge = potenzmenge + result + " })";
-			System.out.println(potenzmenge);
+			potenzmenge = potenzmenge + result + " }, )";
+			System.out.print(potenzmenge);
 			result = "";
-			potenzmenge = "P({";
+			// potenzmenge = "P({";
 		}
 	}
 
